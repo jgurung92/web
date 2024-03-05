@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Products</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+<body>
+    <h1 class="pages-text-center">Update Products</h1>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="home-button">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Update Products
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/Users/jitengurung/Documents/PPU24/CMPS262/WEB/products.html">Home</a>
+                        <a class="dropdown-item" href="/Users/jitengurung/Documents/PPU24/CMPS262/WEB/productsAdd.html">Add Products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Search box -->
+        <div class="search-box">
+            <label for="search">Search:</label>
+            <input type="text" class="form-control" id="search" placeholder="Search by ID, Name, or Category" autocomplete="off">
+        </div>
+
+        <!-- Form for updating product details -->
+        <form id="updateForm" class="form">
+            <div class="form-group">
+                <label for="id"><b>ID:</b></label>
+                <input name="id" id="id" type="text" class="form-control" placeholder="Product ID" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="name"><b>Name:</b></label>
+                <input name="name" id="name" type="text" class="form-control" placeholder="Product Name" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="category"><b>Category:</b></label>
+                <input name="category" id="category" type="text" class="form-control" placeholder="Product Category" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Update Product</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+        <!-- Script tags for Bootstrap and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>   
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+    
+        <!-- this is for the toast message -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+        <script src="./js/jquery.toaster.js"></script> 
+
+            <!-- Call populateFormFields function on page load -->
+    <script>
+        $(document).ready(function() {
+            $('#search').on('input', function() {
+                const searchTerm = $(this).val();
+                populateFormFields(searchTerm);
+            });
+        });
+    </script>
+    
+    
+        <!-- JavaScript file for updating products -->
+        <script src="./js/updateproducts.js"></script>
+</html>
+

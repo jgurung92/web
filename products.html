@@ -1,0 +1,93 @@
+
+ 
+<!DOCTYPE html> 
+<html lang="en">
+    <title>Products</title>
+<head>
+     <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=, initial-scale=1.0"> 
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+
+    <!--Bootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <h1 class="pages-text-center"> Products </h1>
+<!--
+    <div class="container-fluid">
+        <div class="row">
+            <div class="home-button">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Home
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="productsAdd.html">Add Products</a>
+                        <a class="dropdown-item" href="productsUpdate.html">Update Products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ -->   
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="home-button">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Home
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/Users/jitengurung/Documents/PPU24/CMPS262/WEB/productsAdd.html">Add Products</a>
+                        <a class="dropdown-item" href="/Users/jitengurung/Documents/PPU24/CMPS262/WEB/productsUpdate.html">Update Products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Creating Home button called "Add Products" -->
+   <!--  
+    <div class ="container-fluid">
+        <div class= "row">
+            <div class = "home-button">
+                <button class = "btn btn-secondary" onclick= "window.location.href='productsAdd.html'">Add Products</button>
+                <button class = "btn btn-secondary" onclick= "window.location.href='productsUpdate.html'">Update Products</button>
+            </div>
+        </div>
+    </div>
+   -->
+
+    <!-- Script that imports the pakage from gird.js -->
+   
+    <div class = "container">
+        <div id = "table"></div>
+    </div>
+</body>
+
+ <!-- Script tags for Bootstrap and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+
+ <!-- CDN  --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script> 
+
+<!-- Calls our API Script (path to getproducts.js file) (might not need this here)--> 
+<script src="./js/getproducts.js"></script>   
+
+</html> 
