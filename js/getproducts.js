@@ -11,7 +11,12 @@ new gridjs.Grid({
         {name: "category", width: "100px"} ],
     
     server: {
-        url: "http://localhost:8003/api/v1/nepalSupermarket",
+        // connecting endpoint locally:
+        // url: "http://localhost:8003/api/v1/nepalSupermarket",
+        
+        // connecting endpoint remotely:
+        url: "https://nepalsupermarket.onrender.com/api/v1/nepalSupermarket",
+
         then: (data) => {
             data.sort((a,b) => a.id - b.id);
             return data.map((products) => [

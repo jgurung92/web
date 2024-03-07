@@ -1,7 +1,11 @@
 // Function to fetch all products
 async function fetchProducts() {
     try {
-        const response = await fetch('http://localhost:8003/api/v1/nepalSupermarket');
+        // connecting endpoint locally
+        // const response = await fetch('http://localhost:8003/api/v1/nepalSupermarket');
+
+        // connecting endpoint Remotely:
+        const response = await fetch('https://nepalsupermarket.onrender.com/api/v1/nepalSupermarket');
         if (!response.ok) {
             throw new Error('Failed to fetch products');
         }
@@ -65,8 +69,12 @@ function populateFormFields(searchTerm) {
 async function updateProduct(id, data) {
     try {
         console.log('Updating product with ID:', id);
-        
-        const url = 'http://localhost:8003/api/v1/nepalSupermarket/' + id;
+
+        // connecting endpoint locally:
+        // const url = 'http://localhost:8003/api/v1/nepalSupermarket/' + id;
+
+        // connecting endpoint remotely:
+        const url =  'https://nepalsupermarket.onrender.com/api/v1/nepalSupermarket' + id;
         console.log('Request URL:', url);
         
         const requestBody = JSON.stringify(data);
@@ -95,40 +103,3 @@ async function updateProduct(id, data) {
         $.toaster({ priority: 'danger', title: 'Error', message: 'Failed to update product' });
     }
 }
-
-
-// Function to update product details
-/*
-async function updateProduct(id, data) {
-    try {
-        const url = 'http://localhost:8003/api/v1/nepalSupermarket/' + id;
-        const response = await fetch(url, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-        if (!response.ok) {
-            throw new Error('Failed to update product');
-        }
-        const updatedProduct = await response.json();
-        console.log('Product updated:', updatedProduct);
-        $.toaster({ priority: 'success', title: 'Products', message: 'Product has been updated' });
-    } catch (error) {
-        console.error('Error updating product:', error);
-        $.toaster({ priority: 'danger', title: 'Error', message: 'Failed to update product' });
-    }
-}
-
-*/ 
-// Populate dropdown on page load
-// populateDropdown('id', 'productId');
-
-
-
-
-
-
-
-

@@ -8,7 +8,12 @@ formEl.addEventListener('submit', event => {
         $.toaster({ priority : 'danger', title : 'Error', message : "Oops! something went wrong."})
     }
     else {
-        fetch('http://localhost:8003/api/v1/nepalSupermarket', {
+        // connecting endpoint locally:
+        // fetch('http://localhost:8003/api/v1/nepalSupermarket', {
+
+        // connecting endpoint remotely:
+            fetch('https://nepalsupermarket.onrender.com/api/v1/nepalSupermarket', {
+        
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/json'
