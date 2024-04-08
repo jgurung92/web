@@ -1,3 +1,7 @@
 # Product Management Application
 
 ## What is product management site?
+Product management application will help user to manage inventory where the user can add and update products at anytime. 
+
+## What programming language were used to developed this application ?
+HTML, CSS, JAVASCRIPT
