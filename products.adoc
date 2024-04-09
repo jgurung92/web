@@ -1,0 +1,20 @@
+# Inventory Management Application
+
+:INVENTORY_APP: Inventory Management
+:INVENTORY_ENV: Staging
+:INVENTORY_URL: https://jgurun.it.pointpark.edu/www/web/products.html
+:INVENTORY_STATUS: Available
+:INVENTORY_VERSION: 1.0
+## What is Inventory management site?
+Inventory management application will help user to manage inventory where the user can add and update products at anytime. 
+
+## What programming language were used to developed this application ?
+HTML, CSS, JAVASCRIPT
+
+## Application Environment details
+
+[grid="rows", format="csv"]
+|=================================
+App, Environment, URL, Status, Version
+`{INVENTORY_APP}`, `{INVENTORY_ENV}`, `{INVENTORY_URL}`, `{INVENTORY_STATUS}`, `{INVENTORY_VERSION}`
+|=================================
